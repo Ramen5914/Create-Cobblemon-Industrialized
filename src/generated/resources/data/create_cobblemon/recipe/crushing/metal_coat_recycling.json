@@ -1,0 +1,18 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "cobblemon:metal_coat"
+    }
+  ],
+  "processing_time": 150,
+  "results": [
+    {
+      "count": 12,
+      "id": "minecraft:iron_nugget"
+    },
+    {
+      "id": "minecraft:clay_ball"
+    }
+  ]
+}

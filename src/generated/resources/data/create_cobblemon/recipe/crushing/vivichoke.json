@@ -1,0 +1,15 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "cobblemon:vivichoke"
+    }
+  ],
+  "processing_time": 70,
+  "results": [
+    {
+      "count": 3,
+      "id": "cobblemon:vivichoke_seeds"
+    }
+  ]
+}

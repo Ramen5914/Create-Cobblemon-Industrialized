@@ -1,0 +1,22 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "cobblemon:protector"
+    }
+  ],
+  "processing_time": 150,
+  "results": [
+    {
+      "id": "minecraft:copper_ingot"
+    },
+    {
+      "count": 5,
+      "id": "create:copper_nugget"
+    },
+    {
+      "count": 2,
+      "id": "minecraft:granite"
+    }
+  ]
+}

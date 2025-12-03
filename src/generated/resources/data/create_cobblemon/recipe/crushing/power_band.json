@@ -1,0 +1,21 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "cobblemon:power_band"
+    }
+  ],
+  "processing_time": 150,
+  "results": [
+    {
+      "count": 2,
+      "id": "minecraft:granite"
+    },
+    {
+      "id": "minecraft:diamond"
+    },
+    {
+      "id": "cobblemon:pink_mint_seeds"
+    }
+  ]
+}

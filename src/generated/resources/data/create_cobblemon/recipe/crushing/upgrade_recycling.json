@@ -1,0 +1,21 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "cobblemon:upgrade"
+    }
+  ],
+  "processing_time": 150,
+  "results": [
+    {
+      "id": "minecraft:amethyst_shard"
+    },
+    {
+      "count": 4,
+      "id": "create:copper_nugget"
+    },
+    {
+      "id": "minecraft:redstone"
+    }
+  ]
+}
