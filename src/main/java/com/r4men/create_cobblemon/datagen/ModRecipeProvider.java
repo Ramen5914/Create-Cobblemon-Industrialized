@@ -1,9 +1,11 @@
 package com.r4men.create_cobblemon.datagen;
 
 import com.cobblemon.mod.common.CobblemonItems;
+import com.r4men.create_cobblemon.CreateCobblemon;
 import com.r4men.create_cobblemon.datagen.create.ModCrushingRecipeGen;
 import com.r4men.create_cobblemon.datagen.create.ModCuttingRecipeGen;
 import com.r4men.create_cobblemon.datagen.create.ModDeployingRecipeGen;
+import com.r4men.create_cobblemon.datagen.create.ModEmptyingRecipeGen;
 import com.r4men.create_cobblemon.util.ModTags;
 import com.simibubi.create.api.data.recipe.ProcessingRecipeGen;
 import net.minecraft.core.HolderLookup;
@@ -39,13 +41,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModTags.Items.DYEABLE_ANCIENT_BALLS)
                 .requires(Items.BLACK_DYE)
                 .unlockedBy("has_black_dye", has(Items.BLACK_DYE))
-                .save(recipeOutput);
+                .save(recipeOutput, CreateCobblemon.MOD_ID + ":ancient_slate_ball");
     }
 
     public static void registerAllProcessing(DataGenerator gen, PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
         GENERATORS.add(new ModCrushingRecipeGen(output, registries));
         GENERATORS.add(new ModCuttingRecipeGen(output, registries));
         GENERATORS.add(new ModDeployingRecipeGen(output, registries));
+        GENERATORS.add(new ModEmptyingRecipeGen(output, registries));
 
         gen.addProvider(true, new DataProvider() {
             @Override

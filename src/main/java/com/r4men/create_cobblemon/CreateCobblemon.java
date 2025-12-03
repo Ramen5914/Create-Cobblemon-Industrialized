@@ -2,12 +2,21 @@ package com.r4men.create_cobblemon;
 
 import com.mojang.logging.LogUtils;
 import com.r4men.create_cobblemon.block.ModBlocks;
+import com.r4men.create_cobblemon.fluid.BaseFluidType;
+import com.r4men.create_cobblemon.fluid.ModFluidTypes;
+import com.r4men.create_cobblemon.fluid.ModFluids;
 import com.r4men.create_cobblemon.item.ModItems;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
+import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.neoforge.client.extensions.common.RegisterClientExtensionsEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
@@ -24,6 +33,9 @@ public class CreateCobblemon {
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
+        ModFluidTypes.register(modEventBus);
+        ModFluids.register(modEventBus);
+
         ModCreativeModeTabs.register(modEventBus);
 
         NeoForge.EVENT_BUS.register(this);
@@ -39,9 +51,20 @@ public class CreateCobblemon {
 
     }
 
-    // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
 
+    }
+
+    @EventBusSubscriber(modid = CreateCobblemon.MOD_ID, value = Dist.CLIENT)
+    public static class ClientModEvents {
+        @SubscribeEvent
+        public static void onClientSetup(FMLClientSetupEvent event) { }
+
+        @SubscribeEvent
+        public static void onClientExtensions(RegisterClientExtensionsEvent event) {
+            event.registerFluidType(((BaseFluidType) ModFluidTypes.ANTIDOTE_WATER_FLUID_TYPE.get()).getClientFluidTypeExtensions(),
+                    ModFluidTypes.ANTIDOTE_WATER_FLUID_TYPE.get());
+        }
     }
 }
