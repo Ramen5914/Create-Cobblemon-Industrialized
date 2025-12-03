@@ -3,7 +3,6 @@ package com.r4men.create_cobblemon.datagen.create;
 import com.cobblemon.mod.common.CobblemonItems;
 import com.r4men.create_cobblemon.CreateCobblemon;
 import com.r4men.create_cobblemon.fluid.ModFluids;
-import com.r4men.create_cobblemon.item.ModItems;
 import com.r4men.create_cobblemon.util.ModTags;
 import com.simibubi.create.api.data.recipe.MixingRecipeGen;
 import com.simibubi.create.content.processing.recipe.HeatCondition;
