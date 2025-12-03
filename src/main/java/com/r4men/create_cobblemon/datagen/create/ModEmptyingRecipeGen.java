@@ -12,7 +12,7 @@ import net.minecraft.world.level.material.Fluid;
 
 import java.util.concurrent.CompletableFuture;
 
-public class ModEmptyingRecipeGen extends EmptyingRecipeGen {
+public final class ModEmptyingRecipeGen extends EmptyingRecipeGen {
     GeneratedRecipe ANTIDOTE = potionEmptying(
             "antidote",
             CobblemonItems.ANTIDOTE,

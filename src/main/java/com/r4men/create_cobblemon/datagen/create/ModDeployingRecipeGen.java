@@ -10,7 +10,7 @@ import net.minecraft.world.item.Items;
 
 import java.util.concurrent.CompletableFuture;
 
-public class ModDeployingRecipeGen extends DeployingRecipeGen {
+public final class ModDeployingRecipeGen extends DeployingRecipeGen {
     GeneratedRecipe ANCIENT_BLACK_BALL_LID = create(
             "ancient_black_ball_lid", b -> b
                     .require(ModItems.TUMBLESTONE_LID)

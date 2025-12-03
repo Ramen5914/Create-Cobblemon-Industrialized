@@ -12,7 +12,7 @@ import net.minecraft.world.level.material.FlowingFluid;
 
 import java.util.concurrent.CompletableFuture;
 
-public class ModFillingRecipeGen extends FillingRecipeGen {
+public final class ModFillingRecipeGen extends FillingRecipeGen {
     GeneratedRecipe ANTIDOTE = potionFilling(
             "antidote",
             ModFluids.ANTIDOTE.get(),

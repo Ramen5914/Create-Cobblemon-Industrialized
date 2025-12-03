@@ -9,7 +9,7 @@ import net.minecraft.world.item.Items;
 
 import java.util.concurrent.CompletableFuture;
 
-public class ModCuttingRecipeGen extends CuttingRecipeGen {
+public final class ModCuttingRecipeGen extends CuttingRecipeGen {
     GeneratedRecipe IRON_BALL_BASE = create(
             "iron_ball_base", b -> b
                     .require(Items.IRON_INGOT)
