@@ -1,6 +1,7 @@
 package com.r4men.create_cobblemon.datagen;
 
 import com.r4men.create_cobblemon.CreateCobblemon;
+import com.r4men.create_cobblemon.datagen.create.ModSequencedAssemblyRecipeGen;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.loot.LootTableProvider;
@@ -11,7 +12,6 @@ import net.neoforged.neoforge.common.data.BlockTagsProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -36,5 +36,11 @@ public class DataGenerator {
 
         generator.addProvider(event.includeClient(), new ModItemModelProvider(packOutput, existingFileHelper));
         generator.addProvider(event.includeClient(), new ModBlockStateProvider(packOutput, existingFileHelper));
+
+        generator.addProvider(event.includeServer(), new ModSequencedAssemblyRecipeGen(packOutput, lookupProvider));
+
+        if (event.includeServer()) {
+            ModRecipeProvider.registerAllProcessing(generator, packOutput, lookupProvider);
+        }
     }
 }
