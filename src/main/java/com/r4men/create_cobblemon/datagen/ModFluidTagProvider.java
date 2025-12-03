@@ -1,6 +1,7 @@
 package com.r4men.create_cobblemon.datagen;
 
 import com.r4men.create_cobblemon.CreateCobblemon;
+import com.r4men.create_cobblemon.fluid.ModFluids;
 import com.r4men.create_cobblemon.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -18,6 +19,12 @@ public class ModFluidTagProvider extends FluidTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.@NotNull Provider provider) {
-        tag(ModTags.Fluids.UPGRADES_TO_FULL_HEAL);
+        tag(ModTags.Fluids.UPGRADES_TO_FULL_HEAL)
+                .add(ModFluids.ANTIDOTE.get())
+                .add(ModFluids.AWAKENING.get())
+                .add(ModFluids.BURN_HEAL.get())
+                .add(ModFluids.ICE_HEAL.get())
+                .add(ModFluids.MEDICINAL_BREW.get())
+                .add(ModFluids.PARALYZE_HEAL.get());
     }
 }
