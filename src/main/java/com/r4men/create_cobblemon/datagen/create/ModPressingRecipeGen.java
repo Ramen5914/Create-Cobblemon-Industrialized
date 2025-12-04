@@ -24,8 +24,8 @@ public class ModPressingRecipeGen extends PressingRecipeGen {
 
     private GeneratedRecipe itemToLid(String name, ItemLike apricorn, ItemLike lid) {
         return create(name, b -> b
-                        .require(apricorn)
-                        .output(lid));
+                .require(apricorn)
+                .output(lid));
     }
 
     public ModPressingRecipeGen(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
