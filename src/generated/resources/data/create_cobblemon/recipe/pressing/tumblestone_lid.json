@@ -1,0 +1,13 @@
+{
+  "type": "create:pressing",
+  "ingredients": [
+    {
+      "item": "cobblemon:tumblestone"
+    }
+  ],
+  "results": [
+    {
+      "id": "create_cobblemon:tumblestone_lid"
+    }
+  ]
+}

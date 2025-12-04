@@ -1,0 +1,13 @@
+{
+  "type": "create:pressing",
+  "ingredients": [
+    {
+      "item": "cobblemon:yellow_apricorn"
+    }
+  ],
+  "results": [
+    {
+      "id": "create_cobblemon:yellow_ball_lid"
+    }
+  ]
+}
