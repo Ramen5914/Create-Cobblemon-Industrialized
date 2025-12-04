@@ -21,5 +21,8 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
 
+      - name: Run game test server with Gradle
+        run: ./gradlew runGameTestServer
+
       - name: Build with Gradle
         run: ./gradlew build
