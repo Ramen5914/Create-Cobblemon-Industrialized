@@ -17,7 +17,9 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
-
+        dropSelf(ModBlocks.EXP_QUARTZ_BLOCK.get());
+        dropSelf(ModBlocks.EXP_QUARTZ_TILES.get());
+        dropSelf(ModBlocks.SMALL_EXP_QUARTZ_TILES.get());
     }
 
     @Override

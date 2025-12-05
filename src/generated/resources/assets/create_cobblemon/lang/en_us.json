@@ -1,4 +1,7 @@
 {
+  "block.create_cobblemon.exp_quartz_block": "Exp Quartz Block",
+  "block.create_cobblemon.exp_quartz_tiles": "Exp Quartz Tiles",
+  "block.create_cobblemon.small_exp_quartz_tiles": "Small Exp Quartz Tiles",
   "fluid_type.create_cobblemon.antidote_fluid_type": "Antidote",
   "fluid_type.create_cobblemon.awakening_fluid_type": "Awakening",
   "fluid_type.create_cobblemon.burn_heal_fluid_type": "Burn Heal",
