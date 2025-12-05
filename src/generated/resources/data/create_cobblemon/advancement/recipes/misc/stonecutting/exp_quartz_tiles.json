@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_exp_quartz": {
+    "has_exp_quartz_block": {
       "conditions": {
         "items": [
           {
-            "items": "create_cobblemon:exp_quartz"
+            "items": "create_cobblemon:exp_quartz_block"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "create_cobblemon:exp_quartz_block"
+        "recipe": "create_cobblemon:stonecutting/exp_quartz_tiles"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_exp_quartz"
+      "has_exp_quartz_block"
     ]
   ],
   "rewards": {
     "recipes": [
-      "create_cobblemon:exp_quartz_block"
+      "create_cobblemon:stonecutting/exp_quartz_tiles"
     ]
   }
 }
