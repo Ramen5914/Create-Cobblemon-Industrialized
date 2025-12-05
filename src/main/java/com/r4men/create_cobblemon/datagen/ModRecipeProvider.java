@@ -3,6 +3,7 @@ package com.r4men.create_cobblemon.datagen;
 import com.cobblemon.mod.common.CobblemonItems;
 import com.cobblemon.mod.common.api.tags.CobblemonItemTags;
 import com.r4men.create_cobblemon.CreateCobblemon;
+import com.r4men.create_cobblemon.block.ModBlocks;
 import com.r4men.create_cobblemon.datagen.create.*;
 import com.r4men.create_cobblemon.item.ModItems;
 import com.r4men.create_cobblemon.recipe.builder.DamagingShapelessRecipeBuilder;
@@ -17,6 +18,8 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.StonecutterRecipe;
 import net.minecraft.world.level.ItemLike;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
 import net.neoforged.neoforge.fluids.FluidType;
@@ -125,6 +128,40 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(
                         CreateCobblemon.MOD_ID,
                         "leftovers"));
+
+        twoByTwoPackerUnpacker(ModItems.EXP_QUARTZ, ModBlocks.EXP_QUARTZ_BLOCK, recipeOutput);
+
+        simpleStonecutterRecipe(ModBlocks.EXP_QUARTZ_BLOCK, ModBlocks.EXP_QUARTZ_TILES, recipeOutput);
+        simpleStonecutterRecipe(ModBlocks.EXP_QUARTZ_BLOCK, ModBlocks.SMALL_EXP_QUARTZ_TILES, recipeOutput);
+    }
+
+    private void simpleStonecutterRecipe(ItemLike input, ItemLike output, RecipeOutput recipeOutput) {
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(input), RecipeCategory.MISC, output)
+                .unlockedBy(getHasName(input), has(input))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(
+                        CreateCobblemon.MOD_ID,
+                        getItemName(output))
+                        .withPrefix("stonecutting/"));
+    }
+
+    private void twoByTwoPackerUnpacker(ItemLike item, ItemLike block, RecipeOutput recipeOutput) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, block, 1)
+                .define('#', item)
+                .pattern("##")
+                .pattern("##")
+                .unlockedBy(getHasName(item), has(item))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(
+                        CreateCobblemon.MOD_ID,
+                        getItemName(block))
+                        .withPrefix("shaped/"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, item, 4)
+                .requires(block)
+                .unlockedBy(getHasName(item), has(item))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(
+                        CreateCobblemon.MOD_ID,
+                        getItemName(item) + "_from_" + getItemName(block))
+                        .withPrefix("shapeless/"));
     }
 
     private void compressionRecipe(ItemLike input, int count, ItemLike output, RecipeOutput recipeOutput) {
