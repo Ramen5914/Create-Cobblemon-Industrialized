@@ -14,9 +14,9 @@
 
 ## Stats
 ### Modrinth
-[![Modrinth Downloads](https://img.shields.io/modrinth/dt/yw4XPwau?style=for-the-badge&logo=modrinth&color=%2300AF5C)](https://modrinth.com/mod/create-cobblemon-industrialized)
-[![Modrinth Version](https://img.shields.io/modrinth/v/yw4XPwau?style=for-the-badge&logo=modrinth&label=Latest%20Version&color=%2300AF5C)](https://modrinth.com/mod/create-cobblemon-industrialized)
-[![Modrinth Followers](https://img.shields.io/modrinth/followers/yw4XPwau?style=for-the-badge&logo=modrinth&color=%2300AF5C)](https://modrinth.com/mod/create-cobblemon-industrialized)
+[![Modrinth Downloads](https://img.shields.io/modrinth/dt/FMcIBFPB?style=for-the-badge&logo=modrinth&color=%2300AF5C)](https://modrinth.com/mod/create-cobblemon-neoforge)
+[![Modrinth Version](https://img.shields.io/modrinth/v/FMcIBFPB?style=for-the-badge&logo=modrinth&label=Latest%20Version&color=%2300AF5C)](https://modrinth.com/mod/create-cobblemon-neoforge)
+[![Modrinth Followers](https://img.shields.io/modrinth/followers/FMcIBFPB?style=for-the-badge&logo=modrinth&color=%2300AF5C)](https://modrinth.com/mod/create-cobblemon-neoforge)
 
 ### Curseforge
 [![CurseForge Downloads](https://img.shields.io/curseforge/dt/1101841?style=for-the-badge&logo=curseforge&color=%23F16436)](https://www.curseforge.com/minecraft/mc-mods/create-cobblemon-industrialized)
