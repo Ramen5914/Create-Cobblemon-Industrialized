@@ -1,4 +1,5 @@
-![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2FRamen5914%2FCreate-Cobblemon-Industrialized%2Fmain%2Fupdate.json&query=%24.versions&style=for-the-badge&logo=semver&label=Available%20For&color=%23d48ad1)
+![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2FRamen5914%2FCreate-Cobblemon-Industrialized%2Frefs%2Fheads%2Fmain%2Fupdate.json&query=%24.versions&style=for-the-badge&cacheSeconds=0)
+
 
 ## GitHub Info
 [![Build Status](https://img.shields.io/github/actions/workflow/status/ramen5914/create-cobblemon-industrialized/build.yml?style=for-the-badge&logo=github)](https://github.com/Ramen5914/Create-Cobblemon-Industrialized/actions/workflows/build.yml)
